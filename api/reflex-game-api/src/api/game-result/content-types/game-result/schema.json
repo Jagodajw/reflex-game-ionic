@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "game_results",
+  "info": {
+    "singularName": "game-result",
+    "pluralName": "game-results",
+    "displayName": "Game results",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "username": {
+      "type": "string"
+    },
+    "score": {
+      "type": "integer"
+    },
+    "user_id": {
+      "type": "integer"
+    }
+  }
+}

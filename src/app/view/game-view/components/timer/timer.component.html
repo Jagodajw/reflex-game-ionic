@@ -1,0 +1,9 @@
+<ion-header class="timer">
+  <div
+    class="timer__background"
+    [ngStyle]="{ 'width.%': (100 * time) / gameDuration }"
+  ></div>
+  <div class="timer__value">
+    {{ time }}
+  </div>
+</ion-header>

@@ -1,0 +1,68 @@
+<ion-content class="auth-view">
+  <div class="auth-view__container">
+    <div class="auth-view__logo">
+      <h1 class="auth-view__logo-text">Reflex Game</h1>
+    </div>
+
+    <div class="auth-view__content">
+      <p class="auth-view__title-text">Zaloguj się</p>
+
+      <form class="auth-view__form" [formGroup]="loginForm">
+        <ion-item class="auth-view__form-input-container">
+          <ion-label position="floating" class="auth-view__form-input-label"
+            >E-mail</ion-label
+          >
+          <ion-input
+            [clearOnEdit]="true"
+            type="email"
+            formControlName="identifier"
+            placeholder="podaj e-mail"
+            #email
+          >
+          </ion-input>
+          <ion-note *ngIf="email.value" slot="error"
+            >Niepoprawny email</ion-note
+          >
+        </ion-item>
+
+        <ion-item class="auth-view__form-input-container">
+          <ion-label position="floating" class="auth-view__form-input-label"
+            >Hasło</ion-label
+          >
+          <ion-input
+            formControlName="password"
+            type="password"
+            placeholder="podaj hasło"
+            #password
+          ></ion-input>
+          <ion-note *ngIf="password.value" slot="error"
+            >hasło musi mieć min. 6 znaków</ion-note
+          >
+        </ion-item>
+
+        <ion-button
+          (click)="loginUser()"
+          [strong]="true"
+          class="auth-view__form-btn"
+          >Zaloguj się
+        </ion-button>
+
+        <div class="auth-view__information">
+          <p>Nie masz konta?</p>
+          <a
+            (click)="navigateToRegistration()"
+            class="auth-view__information-link"
+            >Zarejestruj się</a
+          >
+        </div>
+      </form>
+
+      <div class="footer-txt">
+        <p>
+          Stworzonę przez <br />
+          Jagoda&nbsp;Wasiak, Łukasz&nbsp;Fereniec
+        </p>
+      </div>
+    </div>
+  </div>
+</ion-content>

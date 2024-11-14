@@ -1,0 +1,7 @@
+<app-timer [time]="timeOfGame" [gameDuration]="GAME_DURATION"></app-timer>
+<ion-content [fullscreen]="true" fixed class="game-content">
+  <ng-template scorePosition></ng-template>
+  <span class="game-score" [ngStyle]="
+  gameService.shouldAnimateScorePoints === false  && { transform: 'scale(2)'}">{{
+    gameService.points }}</span>
+</ion-content>

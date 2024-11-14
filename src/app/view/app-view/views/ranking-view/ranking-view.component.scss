@@ -1,0 +1,16 @@
+:host {
+  display: block;
+
+  .ranking-title {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    background: var(--ion-color-primary);
+  }
+  ion-col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+}

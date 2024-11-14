@@ -1,0 +1,11 @@
+:host {
+  display: block;
+
+  ion-button {
+    --border-radius: 50%;
+  }
+  ion-icon {
+    --ionicon-stroke-width: 32px;
+    font-size: 2em;
+  }
+}

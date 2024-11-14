@@ -1,0 +1,15 @@
+:host {
+  display: block;
+
+  .game-content {
+    position: relative;
+  }
+
+  .game-score {
+    position: absolute;
+    top: 50%;
+    left: 44%;
+    font-size: 25px;
+    transition: transform 0.2s;
+  }
+}

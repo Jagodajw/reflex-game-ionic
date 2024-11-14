@@ -1,0 +1,27 @@
+:host {
+  display: block;
+  .about {
+    width: 100%;
+    display: block;
+    &__task-app {
+      text-align: center;
+      &-title {
+        text-align: center;
+      }
+      &-pkt {
+        font-size: 1em;
+      }
+      p {
+        padding: 0px 12px 0px 12px;
+      }
+    }
+  }
+  .item.sc-ion-label-ios-h,
+  .item .sc-ion-label-ios-h {
+    white-space: pre-wrap;
+  }
+  .item.sc-ion-label-md-h,
+  .item .sc-ion-label-md-h {
+    white-space: pre-wrap;
+  }
+}

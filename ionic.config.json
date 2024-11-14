@@ -1,0 +1,7 @@
+{
+  "name": "reflex-game",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

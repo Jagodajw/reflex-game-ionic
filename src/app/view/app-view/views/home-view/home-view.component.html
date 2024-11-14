@@ -1,0 +1,47 @@
+<app-header title="Strona główna"></app-header>
+
+<ion-content class="home-view">
+  <div class="home-view__container">
+    <div class="home-view__play-btn-container">
+      <ion-button expand="block" size="large" [routerLink]="['/game-view']"
+        >Graj</ion-button
+      >
+    </div>
+
+    <div class="home-view__user-info">
+      <div class="home-view__login-user">
+        {{ (userInfoService.userInfo | async)?.user?.username ?? "-" }}
+      </div>
+
+      <ng-container
+        *ngIf="{ lastResult: userInfoService.userLastResult$ | async } as vm"
+      >
+        <div class="home-view__last-score" *ngIf="vm.lastResult !== null">
+          <span class="home-view__last-score-label">Ostatni wynik: </span>
+          <span class="home-view__last-score-value">{{ vm.lastResult }}</span>
+        </div>
+      </ng-container>
+    </div>
+
+    <div class="home-view__last-three-score">
+      <div class="home-view__last-three-score-title">
+        Twoje najlepsze wyniki:
+      </div>
+
+      <div
+        class="home-view__podium"
+        *ngIf="userResults$ | async as userResults"
+      >
+        <div class="home-view__podium-place home-view__podium-place-second">
+          <div>{{ userResults[positions.second] ?? "-" }}</div>
+        </div>
+        <div class="home-view__podium-place home-view__podium-place-first">
+          <div>{{ userResults[positions.first] ?? "-" }}</div>
+        </div>
+        <div class="home-view__podium-place home-view__podium-place-third">
+          <div>{{ userResults[positions.third] ?? "-" }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

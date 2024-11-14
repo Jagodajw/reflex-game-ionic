@@ -1,0 +1,51 @@
+<app-header title="O aplikacji"></app-header>
+
+<ion-row class="about">
+    <div class="about__task-app">
+        <ion-col>
+            <ion-item color="primary">
+                <div class="about__task-app-title">
+                    Zadanie aplikacji
+                </div>
+                <ion-icon name="information-circle" slot="start" size="default"></ion-icon>
+            </ion-item>
+            <ion-item>
+                <ion-label>
+                    Wyświetlanie w różnych częściach ekranu zielonych i czerwonych przycisków przez 1 minutę.
+                    Użytkownik ma za zadanie naciskać tylko zielone przyciski.
+                    Zielonych przycisków może się pojawiać do 5 naraz - do zaliczania wykorzystać wielo-dotyk.
+                </ion-label>
+            </ion-item>
+        </ion-col>
+    </div>
+    <div class="task__task-app">
+        <ion-item-group class="task__task-app">
+            <ion-item color="primary">
+                <ion-label>
+                    Zliczanie punktów
+                </ion-label>
+                <ion-icon name="star" slot="start" size="defaults"></ion-icon>
+            </ion-item>
+            <ion-item>
+                <ion-label class="task__task-app-pkt">Za każdy zielony - naciśnięty przycisk użytkownik dostaje 10
+                    pkt
+                </ion-label>
+            </ion-item>
+            <ion-item>
+                <ion-label class="task__task-app-pkt">Za każdy czerwony - naciśnięty przycisk użytkownik dostaje -5
+                    pkt
+                </ion-label>
+            </ion-item>
+            <ion-item>
+                <ion-label class="task__task-app-pkt">Przy wielo-dotyku ilość punktów za przycisk zielony = 10 x
+                    ilość_dotyków naraz
+                </ion-label>
+            </ion-item>
+            <ion-item>
+                <ion-label class="task__task-app-pkt">Przy wielo-dotyku ilość punktów za przycisk czerwony = -5 x
+                    ilość_dotyków naraz
+                </ion-label>
+            </ion-item>
+        </ion-item-group>
+    </div>
+</ion-row>
